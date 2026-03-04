@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<!-- Fragment: Navbar -->
-<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" th:href="@{/}">Spring MVC Lab</a>
-        <div class="navbar-nav">
-            <a class="nav-link" th:href="@{/}">Home</a>
-            <a class="nav-link" th:href="@{/products}">Produk</a>
-            <a class="nav-link" th:href="@{/about}">About</a>
-            <a th:href="@{/statistics}">Statistik</a>
+<!-- NAVBAR -->
+<nav th:fragment="navbar"
+     class="bg-gradient-to-r from-black via-neutral-900 to-black shadow-lg border-b border-lime-400">
+
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+        <a class="text-2xl font-bold text-lime-400 tracking-wide"
+           th:href="@{/}">
+            Spring MVC Lab
+        </a>
+
+        <div class="space-x-6">
+            <a th:href="@{/}"
+               class="text-lime-300 hover:text-red-500 font-medium transition duration-300">
+                Home
+            </a>
+
+            <a th:href="@{/products}"
+               class="text-lime-300 hover:text-red-500 font-medium transition duration-300">
+                Products
+            </a>
+
+            <a th:href="@{/about}"
+               class="text-lime-300 hover:text-red-500 font-medium transition duration-300">
+                About
+            </a>
+
+            <a th:href="@{/statistics}"
+               class="text-lime-300 hover:text-red-500 font-medium transition duration-300">
+                Statistics
+            </a>
         </div>
+
     </div>
 </nav>
 
-<!-- Fragment: Footer -->
-<footer th:fragment="footer" class="bg-light text-center py-3 mt-5">
-    <div class="container">
-        <p class="text-muted mb-0">
-            Spring MVC Lab &copy; 2026 | WEB-202 Week 4
+<!-- FOOTER -->
+<footer th:fragment="footer"
+        class="bg-black text-center py-6 mt-20 border-t-4 border-red-600 shadow-inner">
+
+    <div class="max-w-7xl mx-auto">
+        <p class="font-semibold text-lime-400">
+            Spring MVC Lab © 2026
         </p>
     </div>
+
 </footer>
 
 </html>
